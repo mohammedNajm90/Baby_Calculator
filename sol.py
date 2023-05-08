@@ -19,7 +19,7 @@ print("Server response:", question)
 question = process.stdout.readline().decode()
 print("Server response:", question)
 while(True):
-    # read "[+] Question 1:"
+    # read "[+] Question number:"
     question = process.stdout.readline().decode()
     print("Server response:", question)
     # read "ex:  Evaluate the integral of: -8*sin(x) from 1 to 10."
