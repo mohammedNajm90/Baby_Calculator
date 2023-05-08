@@ -3,9 +3,11 @@ from math import cos, sin
 import subprocess
 
 equation = ''
+
 # execute equation
 def function(x):
     global equation
+    # evaluates the string expression and returns its value
     return eval(equation)
 
 # Define the command to run
@@ -18,6 +20,8 @@ print("Server response:", question)
 # read "Server response: The difference between your input and the correct answer must be less than 1e-6."
 question = process.stdout.readline().decode()
 print("Server response:", question)
+
+# loop for 40 questions
 while(True):
     # read "[+] Question number:"
     question = process.stdout.readline().decode()
@@ -44,7 +48,9 @@ while(True):
     # send answer to server
     process.stdin.write(answer.encode())
     process.stdin.flush()
+
 process.wait()
+# close process
 process.stdin.close()
 process.stdout.close()
 print("****************End Script****************")
