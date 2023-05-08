@@ -1,7 +1,9 @@
 from scipy import integrate
 from math import cos, sin
 import subprocess
+
 equation = ''
+# execute equation
 def function(x):
     global equation
     return eval(equation)
@@ -46,8 +48,3 @@ process.wait()
 process.stdin.close()
 process.stdout.close()
 print("****************End Script****************")
-
-
-
-
-
